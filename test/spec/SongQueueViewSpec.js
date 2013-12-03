@@ -8,6 +8,7 @@ describe('SongQueueView', function() {
         url: '/test/testsong.mp3',
         title:'test song'
       },
+      
       {
         artist: 'data',
         url: '/test/testsong2.mp3',
@@ -23,7 +24,7 @@ describe('SongQueueView', function() {
     expect(SongQueueEntryView.prototype.render).toHaveBeenCalled();
   });
 
-  xit('renders when add or remove event fires from the song queue collection', function(){
+  it('renders when add or remove event fires from the song queue collection', function(){
     spyOn(MyTunes.Views.SongQueueView.prototype, 'render').andCallThrough();
     view = new MyTunes.Views.SongQueueView({collection: fakeSongs});
     view.collection.add({

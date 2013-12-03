@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<head>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.1.1/css/bootstrap.min.css">
+</head>
   <body>
     <!-- Scripts may be placed anywhere on a page. But FYI, they block rendering of elements
      below them until after the scripts load-->
@@ -14,6 +17,10 @@
     <script src="collections/SongQueue.js"></script>
     <script src="models/AppModel.js"></script>
 
+    <script src ="views/SongQueueEntryView.js"></script>
+    <script src ="views/SongQueueView.js"></script>
+    
+
     <script src="views/PlayerView.js"></script>
     <script src="views/LibraryView.js"></script>
     <script src="views/LibraryEntryView.js"></script>
@@ -24,8 +31,8 @@
         // set up model objects
         var library = new MyTunes.Collections.Songs(songData);
 
-        var app = new MyTunes.Models.AppModel({library: library});
 
+        var app = new MyTunes.Models.AppModel({library: library});
         // build a view for the top level of the whole app
         var appView = new MyTunes.Views.AppView({model: app});
 

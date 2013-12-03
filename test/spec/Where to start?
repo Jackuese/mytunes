@@ -1,0 +1,21 @@
+Where to start?
+-The most common element (the song model)
+-models emit events, collections listen for events
+-backbone passes along the model object that triggers an event, which is how it can get passed as an argument to the collection-level listener. 
+
+Views
+
+
+
+
+Models
+-add the required methods to SongModel.js
+-
+
+
+Collections
+-SongQueue.js
+--init
+--enqueue--doesn't actually enqueue anything, it just checks whether an added song should be played
+--playFirst
+--dequeue(song)--

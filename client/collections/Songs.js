@@ -3,8 +3,9 @@ window.MyTunes = window.MyTunes || {};
 window.MyTunes.Collections = window.MyTunes.Collections || {};
 
 MyTunes.Collections.Songs = Backbone.Collection.extend({
-
   model: MyTunes.Models.SongModel
 });
 
+
+// Songs is just the list of song model objects
 
