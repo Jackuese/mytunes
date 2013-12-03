@@ -22,12 +22,11 @@ MyTunes.Collections.SongQueue = MyTunes.Collections.Songs.extend({
   },
   playFirst: function(){
     this.at(0).play();
-   //play the song at index 0 in the queue.
   },
 
   playNext: function(){
-   if (this.length > 1){
-      this.shift();
+   this.shift();
+   if (this.length > 0){
       this.playFirst();
     }
   }

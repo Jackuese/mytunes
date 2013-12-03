@@ -8,7 +8,7 @@ describe('SongQueueView', function() {
         url: '/test/testsong.mp3',
         title:'test song'
       },
-      
+
       {
         artist: 'data',
         url: '/test/testsong2.mp3',
@@ -17,7 +17,7 @@ describe('SongQueueView', function() {
     ]);
   });
 
-  xit('creates SongQueueEntryViews for each queued song & renders them', function(){
+  it('creates SongQueueEntryViews for each queued song & renders them', function(){
     spyOn(MyTunes.Views.SongQueueEntryView.prototype, 'render').andCallThrough();
     view = new MyTunes.Views.SongQueueView({collection: fakeSongs});
     view.render();

@@ -8,16 +8,15 @@ MyTunes.Views.SongQueueView = Backbone.View.extend({
 
 
   initialize: function(){
+    this.collection.on('add', this.render, this);
+    this.collection.on('dequeue', this.render, this);
     this.render();
-    this.on('add', this.render, this);
-    this.on('dequeue', this.render, this);
   },
 
 
 
   render: function(song) {
     this.$el.children().detach();
-    console.log(this.el);
     this.$el.html('<th>Queue</th>').append(
       this.collection.map(function(song){
         return new MyTunes.Views.SongQueueEntryView({model: song}).render();

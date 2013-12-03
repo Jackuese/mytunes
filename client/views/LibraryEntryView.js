@@ -12,7 +12,6 @@ MyTunes.Views.LibraryEntryView = Backbone.View.extend({
     // needs to be updated to enqueue songs rather than play them, which should be done through the SongQueue
     'click': function() {
       this.model.enqueue();
-      this.model.play();
     }
   },
 
